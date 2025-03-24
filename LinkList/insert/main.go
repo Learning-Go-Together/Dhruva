@@ -1,6 +1,8 @@
 package insert
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Node struct {
 	data int64
@@ -82,4 +84,18 @@ func (ll *LinkedList) InsertAtSpecificPosition(index int, data int64) {
 	temp := current.next
 	current.next = newNode
 	newNode.next = temp
+}
+func (ll *LinkedList) ReverseLinkList() {
+	curr := ll.head
+	var prev *Node
+	if curr == nil {
+		return
+	}
+	for curr != nil {
+		next := curr.next
+		curr.next = prev
+		prev = curr
+		curr = next
+	}
+	ll.head = prev
 }

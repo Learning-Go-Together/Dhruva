@@ -16,5 +16,7 @@ func main() {
 	// ll.DeleteAtSpecificPosition(5)
 	ll.InsertAtSpecificPosition(2, 10)
 	ll.PrintList()
+	ll.ReverseLinkList()
+	ll.PrintList()
 
 }
